@@ -1,0 +1,8 @@
+name: tesseractor
+channels:
+  - conda-forge
+dependencies:
+  - click
+  - python=3
+  - pytest
+  - requests
