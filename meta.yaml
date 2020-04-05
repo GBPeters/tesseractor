@@ -1,0 +1,30 @@
+package:
+  name: "tesseractor"
+  version: "0"
+
+source:
+  - path: src/tesseractor
+    folder: tesseractor
+  - path: setup.py
+  - path: README.md
+
+build:
+  number: 1
+  noarch: python
+  entry_points:
+    - tesseractor = tesseractor:run
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - pytest
+  run:
+    - python>=3.5
+    - setuptools
+    - click
+    - requests
+
+test:
+  imports:
+    - tesseractor.tesseractor
